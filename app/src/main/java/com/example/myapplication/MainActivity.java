@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
                         int operand1 = Integer.parseInt(tokens[0]);
                         char operator = tokens[1].charAt(0);
                         int operand2 = Integer.parseInt(tokens[2]);
-                        int result = 0; // Result will be an integer
+                        int result = 0;
 
                         switch (operator) {
                             case '+':
@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
                             case '-':
                                 result = operand1 - operand2;
                                 break;
-                            case '*':
+                            case 'x':
                                 result = operand1 * operand2;
                                 if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE) {
                                     res = "Error: Result exceeds integer range";
@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
                                     return;
                                 }
                                 break;
-                            case '/':
+                            case '÷':
                                 if (operand2 != 0) {
                                     result = operand1 / operand2;
                                 } else {
@@ -237,11 +237,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
-
-
 
     public void displayOne(){
         cal.setText(cur);
@@ -256,8 +252,6 @@ public class MainActivity extends AppCompatActivity {
         res= "";
         op_insert = false;
     }
-
-
 
 
 }
